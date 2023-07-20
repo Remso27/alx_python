@@ -1,12 +1,11 @@
 #!/usr/bin/env
-def fibonacci(n):
-    if(n <= 1):
-        return n
+def fibonacci_sequence(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
     else:
-        return (fibonacci(n-1) + fibonacci(n-2))
-
-n = int(input("Enter the number of terms: "))
-
-print("Fibonacci sequence: ")
-for i in range(n):
-    print(fibonacci(i))
+        fib_nums = [0, 1]
+        while len(fib_nums) < n:
+            fib_nums.append(fib_nums[-1] + fib_nums[-2])
+        return fib_nums
