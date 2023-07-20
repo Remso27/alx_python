@@ -1,8 +1,14 @@
 #!/usr/bin/env
 def validate_password(password):
-    if password == "alx00748":
-        return True
-    else:
+    if len(password) < 8:
         return False
-
-print(validate_password("alx00748"))
+    elif not any(char.isupper() for char in password):
+        return False
+    elif not any(char.islower() for char in password):
+        return False
+    elif not any(char.isdigit() for char in password):
+        return False
+    elif ' ' in password:
+        return False
+    else:
+        return True
