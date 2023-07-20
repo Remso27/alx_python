@@ -1,4 +1,4 @@
 #!/usr/bin/env
 def convert_to_celsius(fahrenheit):
-    temperature  = (fahrenheit-32) / 1.8
-    return temperature
+    celsius   = (fahrenheit-32) * 5/9
+    return celsius 
