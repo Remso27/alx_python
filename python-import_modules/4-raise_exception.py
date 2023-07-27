@@ -5,6 +5,6 @@ def raise_exception():
     try:
         result = a + name
         raise TypeError ("Here")
-    except TypeError as te:
+    except NameError as NE:
         print("Exeption")
-        raise te
+        raise NE
