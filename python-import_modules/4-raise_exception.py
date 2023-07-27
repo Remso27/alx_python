@@ -4,7 +4,7 @@ def raise_exception():
     name = "Rémi"
     try:
         result = a + name
-        raise NameError ("Here")
-    except NameError as NE:
+        raise TypeError ("Here")
+    except TypeError as te:
         print("Exeption")
-        raise NE
+        raise te
