@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Making request module"""
+"""A script that:
+- sends a request to the URL and displays the value of the variable
+"""
 import requests
+import sys
 
 if __name__ == "__main__":
-
-    response = requests.get('https://alu-intranet.hbtn.io/status')
-
-    print("Body response:")
-    print("\t- type: {}".format(type(response.text)))
-    print("\t- content: {}".format(response.text))
+    url = sys.argv[1]
+    response = requests.get(url)
+    result = response.headers.get("X-Request-Id")
+    print(result)
